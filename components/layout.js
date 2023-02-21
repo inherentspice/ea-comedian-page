@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -5,12 +6,19 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaYoutube, FaInstagram, FaTiktok } from "react-icons/fa";
+import { CgCloseO } from "react-icons/cg";
 import { IconContext } from 'react-icons';
 
 
 export const siteTitle = 'Eric Alexander Comedy';
 
 export default function Layout({ children, home }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function handleMenuClick() {
+    setMenuOpen(!menuOpen);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -23,13 +31,15 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         <nav className={styles.siteNav}>
+          <div onClick={handleMenuClick}>
           <IconContext.Provider
             value={{ className: `${styles.reactIcons} ${styles.hamburger}`, size: "50px" }}
           >
-            <GiHamburgerMenu />
+            {menuOpen ? <CgCloseO /> : <GiHamburgerMenu />}
           </IconContext.Provider>
+          </div>
           <div className={styles.menuNavCont}>
-            <ul className={`${styles.menu} ${styles.navMenu}`}>
+            <ul className={`${styles.menu} ${styles.navMenu} ${!menuOpen && styles.closedNav}`}>
               <l1 className={styles.menuItem}>
                 <Link
                   title="Eric Alexander - About page"

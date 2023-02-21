@@ -1,17 +1,34 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
-import Layout from '@/components/layout'
-
-const inter = Inter({ subsets: ['latin'] })
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from '@/styles/Home.module.css';
+import Layout from '@/components/layout';
 
 export default function Home() {
+  const youtubeID = "XtvRaaKjcfY";
+
   return (
     <Layout home>
-      <main>
-
-      </main>
+      <div className={styles.homeCont}>
+        <h2>APPETIZER</h2>
+        <Link href="/live">View Upcoming Dates &gt;</Link>
+        <Image
+          src="/images/stand.jpg"
+          alt=""
+          height={400}
+          width={400}
+          className={styles.homeImg}
+        ></Image>
+      </div>
+      <div className={styles.homeCont}>
+        <h2>MAIN COURSE</h2>
+        <Link href="/video">See More Videos &gt;</Link>
+        <iframe
+          title='Youtube player'
+          sandbox='allow-same-origin allow-forms allow-popups allow-scripts allow-presentation'
+          src={`https://youtube.com/embed/${youtubeID}?autoplay=0`}>
+        </iframe>
+      </div>
     </Layout>
   )
 }
