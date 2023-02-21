@@ -1,0 +1,52 @@
+.container {
+  padding: 0 1rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.siteNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--heading-color);
+  align-items: center;
+  margin: 2rem 0;
+  border-bottom: 1px solid;
+  padding: 2rem;
+}
+
+.menuItem {
+  font-size: 1.5rem;
+}
+
+.socialMedia {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.reactIcons {
+  color: var(--heading-color);
+  cursor: pointer;
+}
+
+.reactIcons:hover {
+  color: var(--highlight-color)
+}
+
+@media only screen and (min-width: 600px) {
+  .hamburger {
+    display: none;
+  }
+}
