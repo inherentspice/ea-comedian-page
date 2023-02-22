@@ -10,6 +10,7 @@ export default function Home() {
   return (
     <Layout home>
       <div className={styles.homeCont}>
+      <div className={styles.homeItemCont}>
         <h2>APPETIZER</h2>
         <Link href="/live">View Upcoming Dates &gt;</Link>
         <Image
@@ -20,7 +21,7 @@ export default function Home() {
           className={styles.homeImg}
         ></Image>
       </div>
-      <div className={styles.homeCont}>
+      <div className={styles.homeItemCont}>
         <h2>MAIN COURSE</h2>
         <Link href="/video">See More Videos &gt;</Link>
         <iframe
@@ -28,6 +29,7 @@ export default function Home() {
           sandbox='allow-same-origin allow-forms allow-popups allow-scripts allow-presentation'
           src={`https://youtube.com/embed/${youtubeID}?autoplay=0`}>
         </iframe>
+      </div>
       </div>
     </Layout>
   )

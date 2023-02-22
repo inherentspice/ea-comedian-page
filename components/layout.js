@@ -82,14 +82,6 @@ export default function Layout({ children, home }) {
             />
           </Link>
         </div>
-        {home ? <Image
-          priority
-          src="/images/profile.png"
-          className={utilStyles.borderCircle}
-          height={350}
-          width={250}
-          alt=""
-        /> : <></>}
         <div className={styles.socialMedia}>
           <Link href="https://www.instagram.com/interestedinbread/" target="_blank">
             <IconContext.Provider
@@ -113,6 +105,14 @@ export default function Layout({ children, home }) {
             </IconContext.Provider>
           </Link>
         </div>
+        {home ? <Image
+          priority
+          src="/images/profile.png"
+          className={utilStyles.borderCircle}
+          height={350}
+          width={250}
+          alt=""
+        /> : <></>}
       </header>
       <main>{children}</main>
     </div>
