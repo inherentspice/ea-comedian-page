@@ -33,8 +33,10 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--highlight-color);
+li:hover {
+  box-shadow: 10px 8px 0 0 var(--highlight-color);
+  animation: hoverLink 0.3s ease-in;
+
 }
 
 h1, h2, h3, h4, h5, h6, strong, a{
@@ -43,8 +45,36 @@ h1, h2, h3, h4, h5, h6, strong, a{
 }
 
 
-h1, h2, a {
+h1 {
   color: var(--heading-color);
+}
+
+h2, li {
+  margin: 1rem 0;
+  background-color: white;
+  color: black;
+  box-shadow: 9px 7px 0 0 var(--heading-color);
+  width: fit-content;
+  border: 1px solid var(--background-color);
+}
+
+li {
+  padding: 0 2rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+@keyframes hoverLink {
+  from {
+    box-shadow: 9px 7px 0 0 var(--heading-color);
+  }
+  to {
+    box-shadow: 10px 8px 0 0 var(--highlight-color);
+  }
+}
+
+h2 {
+  padding: 0 1rem;
 }
 
 p {

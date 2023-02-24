@@ -40,30 +40,30 @@ export default function Layout({ children, home }) {
           </div>
           <div className={styles.menuNavCont}>
             <ul className={`${styles.menu} ${styles.navMenu} ${!menuOpen && styles.closedNav}`}>
-              <l1 className={styles.menuItem}>
+              <li className={styles.menuItem}>
                 <Link
                   title="Eric Alexander - About page"
                   href="/about"
                 >ABOUT</Link>
-              </l1>
-              <l1 className={styles.menuItem}>
+              </li>
+              <li className={styles.menuItem}>
                 <Link
                   title="Eric Alexander - Live page"
                   href="/live"
                 >LIVE</Link>
-              </l1>
-              <l1 className={styles.menuItem}>
+              </li>
+              <li className={styles.menuItem}>
                 <Link
                   title="Eric Alexander - Video page"
                   href="/video"
                 >VIDEO</Link>
-              </l1>
-              <l1 className={styles.menuItem}>
+              </li>
+              <li className={styles.menuItem}>
                 <Link
                   title="Eric Alexander - Contact page"
                   href="/contact"
                 >CONTACT</Link>
-              </l1>
+              </li>
             </ul>
           </div>
         </nav>
