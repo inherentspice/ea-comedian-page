@@ -53,6 +53,17 @@
   display: none;
 }
 
+.mainCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.borderImg {
+  display: none;
+}
+
 @media only screen and (min-width: 600px) {
   .hamburger {
     display: none;
@@ -60,5 +71,12 @@
 
   .closedNav {
     display: flex;
+  }
+
+  .borderImg {
+    display: flex;
+    position: fixed;
+    left:0;
+    top: 50%;
   }
 }

@@ -68,7 +68,7 @@ export default function Layout({ children, home }) {
           </div>
         </nav>
         <div className={styles.siteTitle}>
-          <Link
+          {home && <Link
             title="Eric Alexander - Home Page"
             href="/"
           >
@@ -80,7 +80,7 @@ export default function Layout({ children, home }) {
               alt=""
               className={utilStyles.heading2Xl}
             />
-          </Link>
+          </Link>}
         </div>
         <div className={styles.socialMedia}>
           <Link href="https://www.instagram.com/interestedinbread/" target="_blank">
@@ -112,9 +112,16 @@ export default function Layout({ children, home }) {
           height={350}
           width={250}
           alt=""
-        /> : <></>}
+        /> :
+        <Image
+          src="/images/profile.png"
+          alt=""
+          className={styles.borderImg}
+          width={600}
+          height={800}
+        />}
       </header>
-      <main>{children}</main>
+      <main className={styles.mainCont}>{children}</main>
     </div>
   );
 }
