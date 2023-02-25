@@ -12,7 +12,7 @@ import { IconContext } from 'react-icons';
 
 export const siteTitle = 'Eric Alexander Comedy';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, about, contact, video, live }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function handleMenuClick() {
@@ -33,78 +33,46 @@ export default function Layout({ children, home }) {
         <nav className={styles.siteNav}>
           <div onClick={handleMenuClick}>
           <IconContext.Provider
-            value={{ className: `${styles.reactIcons} ${styles.hamburger}`, size: "50px" }}
+            value={{ className: `${styles.hamburger}`, size: "50px" }}
           >
             {menuOpen ? <CgCloseO /> : <GiHamburgerMenu />}
           </IconContext.Provider>
           </div>
           <div className={styles.menuNavCont}>
             <ul className={`${styles.menu} ${styles.navMenu} ${!menuOpen && styles.closedNav}`}>
-              <li className={styles.menuItem}>
+              {!home && <li className={styles.menuItem}>
+                <Link
+                  title="Eric Alexander - Home"
+                  href="/"
+                >HOME</Link>
+              </li>}
+              {!about && <li className={styles.menuItem}>
                 <Link
                   title="Eric Alexander - About page"
                   href="/about"
                 >ABOUT</Link>
-              </li>
-              <li className={styles.menuItem}>
+              </li>}
+              {!live && <li className={styles.menuItem}>
                 <Link
                   title="Eric Alexander - Live page"
                   href="/live"
                 >LIVE</Link>
-              </li>
-              <li className={styles.menuItem}>
+              </li>}
+              {!video && <li className={styles.menuItem}>
                 <Link
                   title="Eric Alexander - Video page"
                   href="/video"
                 >VIDEO</Link>
-              </li>
-              <li className={styles.menuItem}>
+              </li>}
+              {!contact && <li className={styles.menuItem}>
                 <Link
                   title="Eric Alexander - Contact page"
                   href="/contact"
                 >CONTACT</Link>
-              </li>
+              </li>}
             </ul>
           </div>
         </nav>
-        <div className={styles.siteTitle}>
-          {home && <Link
-            title="Eric Alexander - Home Page"
-            href="/"
-          >
-            <Image
-              priority
-              src="/images/title.png"
-              height={100}
-              width={700}
-              alt=""
-              className={utilStyles.heading2Xl}
-            />
-          </Link>}
-        </div>
-        <div className={styles.socialMedia}>
-          <Link href="https://www.instagram.com/interestedinbread/" target="_blank">
-            <IconContext.Provider
-              value={{ className: styles.reactIcons, size: "50px" }}
-            >
-              <FaInstagram />
-            </IconContext.Provider>
-          </Link>
-          <Link href="https://www.youtube.com/@interestedinbread3634" target="_blank">
-            <IconContext.Provider
-              value={{ className: styles.reactIcons, size: "50px" }}
-            >
-              <FaYoutube />
-            </IconContext.Provider>
-          </Link>
-          <Link href="https://www.tiktok.com/@interestedinbread" target="_blank">
-            <IconContext.Provider
-              value={{ className: styles.reactIcons, size: "50px" }}
-            >
-              <FaTiktok />
-            </IconContext.Provider>
-          </Link>
-        </div>
         {home ? <Image
           priority
           src="/images/profile.png"
@@ -120,6 +88,44 @@ export default function Layout({ children, home }) {
           width={600}
           height={800}
         />}
+        {/* <div className={styles.siteTitle}>
+          {home && <Link
+            title="Eric Alexander - Home Page"
+            href="/"
+          >
+            <Image
+              priority
+              src="/images/profile.png"
+              height={100}
+              width={700}
+              alt=""
+              className={utilStyles.heading2Xl}
+            />
+          </Link>}
+        </div> */}
+        <div className={styles.socialMedia}>
+          <Link href="https://www.instagram.com/interestedinbread/" target="_blank">
+            <IconContext.Provider
+              value={{ className: styles.reactIcons, size: "100px" }}
+            >
+              <FaInstagram />
+            </IconContext.Provider>
+          </Link>
+          <Link href="https://www.youtube.com/@interestedinbread3634" target="_blank">
+            <IconContext.Provider
+              value={{ className: styles.reactIcons, size: "100px" }}
+            >
+              <FaYoutube />
+            </IconContext.Provider>
+          </Link>
+          <Link href="https://www.tiktok.com/@interestedinbread" target="_blank">
+            <IconContext.Provider
+              value={{ className: styles.reactIcons, size: "100px" }}
+            >
+              <FaTiktok />
+            </IconContext.Provider>
+          </Link>
+        </div>
       </header>
       <main className={styles.mainCont}>{children}</main>
     </div>

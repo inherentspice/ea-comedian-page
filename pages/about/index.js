@@ -4,7 +4,7 @@ import styles from "@/styles/about.module.css";
 
 export default function About() {
   return (
-    <Layout>
+    <Layout about>
       <div className={styles.container}>
         <div className={styles.aboutCont}>
           <h2>ABOUT</h2>
