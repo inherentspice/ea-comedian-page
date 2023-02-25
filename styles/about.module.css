@@ -10,9 +10,15 @@
   border: 3px solid var(--main-text-color);
   border-radius: 60px;
   padding: 2rem;
-  width: 50%;
+  width: 100%;
 }
 
 .aboutCont>p {
   line-height: 3rem;
+}
+
+@media only screen and (min-width: 1350px) {
+  .aboutCont {
+    width: 50%;
+  }
 }
