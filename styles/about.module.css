@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: 3rem 0;
+  margin: 3rem;
 }
 
 .aboutCont {
@@ -11,6 +11,7 @@
   border-radius: 60px;
   padding: 2rem;
   width: 100%;
+  background-color: var(--background-color);
 }
 
 .aboutCont>p {
