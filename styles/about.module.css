@@ -9,3 +9,9 @@
 .aboutCont>p {
   line-height: 3rem;
 }
+
+@media only screen and (min-width: 1350px) {
+  .aboutContainer {
+    width: 50%;
+  }
+}
