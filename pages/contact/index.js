@@ -30,7 +30,7 @@ export default function Contact() {
   }
   return (
     <Layout contact>
-      <div className={styles.container}>
+      <div className={`${utilStyles.container} ${styles.contactCont}`}>
         <h2>CONTACT</h2>
         <p>FOR BOOKING AND PRESS INQUIRIES, PLEASE MAIL BELOW</p>
       <form onSubmit={handleSubmit(sendEmail)}>

@@ -1,0 +1,63 @@
+.liveCont {
+  border: 3px solid var(--main-text-color);
+  border-radius: 60px;
+  padding: 2rem;
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+.latestGigs {
+  margin: 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.singleGig {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--main-text-color);
+  margin: 0 0;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.singleGig:hover {
+  box-shadow: 10px 0 0 0 var(--highlight-color);
+}
+
+.location {
+  display: flex;
+  gap: 1rem;
+  text-align: right;
+}
+
+.eventDate {
+  text-transform: uppercase;
+}
+
+.venueTown {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.venueName {
+  font-size: 1.4rem;
+}
+
+.ticketPortal {
+  text-transform: uppercase;
+  color: var(--heading-color);
+}
+
+.ticketPortal:hover {
+  color: var(--highlight-color);
+}
+
+@media only screen and (min-width: 1350px) {
+  .location {
+    text-align: left;
+  }
+}
