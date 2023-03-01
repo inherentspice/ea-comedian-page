@@ -1,11 +1,12 @@
 import Layout from "@/components/layout";
 import Image from "next/image";
 import styles from "@/styles/about.module.css";
+import utilStyles from "@/styles/utils.module.css";
 
 export default function About() {
   return (
     <Layout about>
-      <div className={styles.container}>
+      <div className={utilStyles.container}>
         <div className={styles.aboutCont}>
           <h2>ABOUT</h2>
           <p>

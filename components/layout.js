@@ -127,7 +127,7 @@ export default function Layout({ children, home, about, contact, video, live }) 
           </Link>
         </div>
       </header>
-      <main className={styles.mainCont}>{children}</main>
+      <main className={home ? styles.mainContHome : styles.mainCont}>{children}</main>
     </div>
   );
 }

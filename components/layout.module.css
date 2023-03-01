@@ -33,6 +33,26 @@
 
 .menuItem {
   font-size: 1.5rem;
+  margin: 1rem 0;
+  background-color: white;
+  color: black;
+  box-shadow: 9px 7px 0 0 var(--heading-color);
+  width: fit-content;
+  border: 1px solid var(--background-color);
+}
+
+.menuItem:hover {
+  box-shadow: 10px 8px 0 0 var(--highlight-color);
+  animation: hoverLink 0.3s ease-in;
+}
+
+@keyframes hoverLink {
+  from {
+    box-shadow: 9px 7px 0 0 var(--heading-color);
+  }
+  to {
+    box-shadow: 10px 8px 0 0 var(--highlight-color);
+  }
 }
 
 .socialMedia {
@@ -62,6 +82,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: center;
+  width: 100vw;
+}
+
+.mainContHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 100vw;
 }

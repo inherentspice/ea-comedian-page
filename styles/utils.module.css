@@ -52,3 +52,17 @@
 .lightText {
   color: #666;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0.5rem;
+  min-width: 60%;
+}
+
+@media only screen and (min-width: 1350px) {
+  .container {
+    margin: 3rem;
+  }
+}
