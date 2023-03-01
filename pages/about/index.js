@@ -6,7 +6,7 @@ import utilStyles from "@/styles/utils.module.css";
 export default function About() {
   return (
     <Layout about>
-      <div className={utilStyles.container}>
+      <div className={`${utilStyles.container} ${styles.aboutContainer}`}>
         <div className={styles.aboutCont}>
           <h2>ABOUT</h2>
           <p>
