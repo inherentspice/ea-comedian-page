@@ -1,6 +1,4 @@
-.container {
-  display: flex;
-  margin: 1rem;
+.contactCont {
   flex-direction: column;
   border: 3px solid var(--main-text-color);
   border-radius: 60px;
@@ -39,10 +37,6 @@
 }
 
 @media only screen and (min-width: 1350px) {
-  .container {
-    margin: 3rem;
-  }
-
   .nameEmailCont {
     flex-direction: row;
   }

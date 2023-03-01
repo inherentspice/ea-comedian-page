@@ -96,7 +96,7 @@ textarea {
 
 textarea:focus,
 input:focus {
-  box-shadow: 7px 6px 0 0 var(--heading-color);
+  box-shadow: 7px 0 0 0 var(--highlight-color);
 }
 
 @media screen and (min-width: 600px) {
