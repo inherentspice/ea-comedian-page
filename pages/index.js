@@ -6,7 +6,7 @@ import Layout from '@/components/layout';
 
 export default function Home() {
   const youtubeID = "XtvRaaKjcfY";
-
+  console.log(youtubeID);
   return (
     <Layout home>
       <div className={styles.homeCont}>
